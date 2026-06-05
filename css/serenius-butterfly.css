@@ -1,0 +1,137 @@
+:root {
+  --seren-green: #677B50;
+  --seren-green-dark: #576C4F;
+  --seren-page-bg: #f7f9fe;
+  --seren-dark-bg: #0d0d0d;
+  --serenius-one-flow-image: url("https://a1.boltp.com/2026/06/04/6a218a2edb885.jpg");
+}
+
+
+body:has(#page-header.full_page) #web_bg {
+  background-image: var(--serenius-one-flow-image) !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+}
+
+body:not(:has(#page-header.full_page)) #web_bg {
+  display: none !important;
+}
+
+#page-header.full_page {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#page-header.full_page::before {
+  background-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+#page-header.full_page + main,
+#page-header.full_page ~ main {
+  position: relative;
+}
+
+
+
+#page-header.not-home-page,
+#page-header.post-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.seren-header-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 5;
+  height: 82px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.seren-wave-svg {
+  display: block;
+  width: 100%;
+  height: 82px;
+  min-height: 62px;
+}
+
+.seren-wave-layers > use {
+  animation: serenWaveMove 24s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.seren-wave-layers > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: color-mix(in srgb, #677B50 15%, #f7f9fe 85%);
+  opacity: 0.34;
+}
+
+.seren-wave-layers > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: color-mix(in srgb, #677B50 8%, #f7f9fe 92%);
+  opacity: 0.48;
+}
+
+.seren-wave-layers > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: color-mix(in srgb, #677B50 11%, #f7f9fe 89%);
+  opacity: 0.5;
+}
+
+.seren-wave-layers > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: #f7f9fe;
+  opacity: 1;
+}
+
+#site-info,
+#page-site-info,
+#post-info {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes serenWaveMove {
+  0% { transform: translate3d(-90px, 0, 0); }
+  100% { transform: translate3d(85px, 0, 0); }
+}
+
+html[data-theme='dark'] .seren-wave-layers > use:nth-child(1),
+html[data-theme='dark'] .seren-wave-layers > use:nth-child(3) {
+  fill: color-mix(in srgb, #677B50 18%, #0d0d0d 82%);
+  opacity: 0.34;
+}
+
+html[data-theme='dark'] .seren-wave-layers > use:nth-child(2),
+html[data-theme='dark'] .seren-wave-layers > use:nth-child(4) {
+  fill: #0d0d0d;
+}
+
+@media (max-width: 768px) {
+  .seren-header-wave,
+  .seren-wave-svg {
+    height: 48px;
+    min-height: 48px;
+  }
+}
+
+
+
+.seren-runtime {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-left: 0.45em;
+}
+
+.seren-runtime::before {
+  content: "·";
+  opacity: 0.65;
+}
+
