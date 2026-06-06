@@ -34,30 +34,39 @@ body:not(:has(#page-header.full_page)) #web_bg {
 
 #post,
 #page {
-  --seren-article-text: color-mix(in srgb, var(--font-color, #1f2933) 92%, #111827 8%);
-  --seren-article-muted: color-mix(in srgb, var(--font-color, #1f2933) 62%, transparent);
-  --seren-article-soft: color-mix(in srgb, #677B50 10%, transparent);
-  --seren-article-border: color-mix(in srgb, #677B50 22%, transparent);
+  --seren-article-text: color-mix(in srgb, var(--font-color, #1f2933) 84%, #2f382b 16%);
+  --seren-article-muted: color-mix(in srgb, var(--font-color, #1f2933) 58%, #677B50 12%);
+  --seren-article-soft: color-mix(in srgb, #677B50 9%, transparent);
+  --seren-article-border: color-mix(in srgb, #677B50 18%, transparent);
+  --seren-article-paper: color-mix(in srgb, var(--card-bg, #fff) 92%, #f4f8ed 8%);
+  --seren-reading-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
+  --seren-heading-font: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
 }
 
 #post {
-  padding: clamp(1.25rem, 2vw, 2.35rem);
+  padding: clamp(1.45rem, 2.4vw, 2.75rem);
+  background:
+    radial-gradient(circle at 98% 2%, color-mix(in srgb, #677B50 7%, transparent), transparent 24rem),
+    var(--seren-article-paper);
 }
 
 #article-container {
   color: var(--seren-article-text);
-  font-size: 17.5px;
-  line-height: 2;
+  font-family: var(--seren-reading-font);
+  font-size: 19px;
+  line-height: 2.08;
   letter-spacing: 0;
   word-break: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 #article-container p {
-  margin: 0 0 1.18em;
+  margin: 0 0 1.28em;
 }
 
 #article-container > p:first-of-type {
-  font-size: 1.04em;
+  font-size: 1.03em;
   color: color-mix(in srgb, var(--seren-article-text) 88%, #677B50 12%);
 }
 
@@ -70,48 +79,61 @@ body:not(:has(#page-header.full_page)) #web_bg {
   position: relative;
   margin: 2.05em 0 0.85em;
   color: color-mix(in srgb, var(--font-color, #1f2933) 88%, #677B50 12%);
-  font-weight: 760;
+  font-family: var(--seren-heading-font);
+  font-weight: 720;
   letter-spacing: 0;
-  line-height: 1.35;
+  line-height: 1.36;
 }
 
 #article-container h1 {
-  font-size: clamp(1.72rem, 2.6vw, 2.35rem);
+  font-size: clamp(1.9rem, 2.8vw, 2.55rem);
 }
 
 #article-container h2 {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  padding-bottom: 0.55rem;
-  border-bottom: 1px solid var(--seren-article-border);
-  font-size: clamp(1.42rem, 2vw, 1.82rem);
+  gap: 0.7rem;
+  padding-bottom: 0.68rem;
+  border-bottom: 0;
+  font-size: clamp(1.52rem, 2.05vw, 1.95rem);
+}
+
+#article-container h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(100%, 22rem);
+  height: 1px;
+  background: linear-gradient(90deg, color-mix(in srgb, #677B50 42%, transparent), color-mix(in srgb, #677B50 10%, transparent), transparent);
 }
 
 #article-container h2::before {
   content: "";
   flex: 0 0 auto;
-  width: 0.48rem;
-  height: 1.45rem;
+  width: 0.58rem;
+  height: 0.58rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, #677B50, color-mix(in srgb, #677B50 36%, transparent));
-  box-shadow: 0 0 0 0.28rem color-mix(in srgb, #677B50 12%, transparent);
+  background: radial-gradient(circle, #677B50 0 42%, color-mix(in srgb, #677B50 24%, transparent) 43% 100%);
+  box-shadow:
+    0 0 0 0.32rem color-mix(in srgb, #677B50 9%, transparent),
+    0 0.28rem 1.1rem -0.42rem color-mix(in srgb, #677B50 70%, #000);
 }
 
 #article-container h3 {
-  font-size: clamp(1.18rem, 1.5vw, 1.38rem);
+  font-size: clamp(1.28rem, 1.55vw, 1.5rem);
 }
 
 #article-container h3::before {
   content: "";
   display: inline-block;
-  width: 0.52em;
-  height: 0.52em;
-  margin-right: 0.45em;
-  border-radius: 999px;
-  background: #677B50;
-  box-shadow: 0 0 0 0.22em color-mix(in srgb, #677B50 13%, transparent);
-  vertical-align: 0.08em;
+  width: 0.9em;
+  height: 0.45em;
+  margin-right: 0.42em;
+  border-radius: 999px 999px 999px 0;
+  background: linear-gradient(135deg, color-mix(in srgb, #677B50 92%, #fff), color-mix(in srgb, #677B50 34%, transparent));
+  transform: rotate(-18deg);
+  vertical-align: 0.1em;
 }
 
 #article-container > h1:first-child,
@@ -123,10 +145,11 @@ body:not(:has(#page-header.full_page)) #web_bg {
 #article-container a {
   color: color-mix(in srgb, #677B50 84%, var(--font-color, #1f2933));
   text-decoration: none;
-  background-image: linear-gradient(color-mix(in srgb, #677B50 34%, transparent), color-mix(in srgb, #677B50 34%, transparent));
+  font-weight: 600;
+  background-image: linear-gradient(color-mix(in srgb, #677B50 25%, transparent), color-mix(in srgb, #677B50 25%, transparent));
   background-position: 0 100%;
   background-repeat: no-repeat;
-  background-size: 100% 0.12em;
+  background-size: 100% 0.18em;
   transition: color 180ms ease, background-size 180ms ease;
 }
 
@@ -137,15 +160,16 @@ body:not(:has(#page-header.full_page)) #web_bg {
 
 #article-container blockquote {
   position: relative;
-  margin: 1.45rem 0;
-  padding: 1.05rem 1.2rem 1.05rem 1.35rem;
+  margin: 1.55rem 0;
+  padding: 1.1rem 1.35rem 1.1rem 1.55rem;
   border: 1px solid var(--seren-article-border);
-  border-left: 0.34rem solid #677B50;
-  border-radius: 14px;
+  border-left: 0.28rem solid #677B50;
+  border-radius: 16px;
   background:
-    linear-gradient(135deg, color-mix(in srgb, #677B50 12%, transparent), transparent 72%),
-    color-mix(in srgb, var(--card-bg, #fff) 84%, transparent);
+    linear-gradient(135deg, color-mix(in srgb, #677B50 10%, transparent), transparent 70%),
+    color-mix(in srgb, var(--card-bg, #fff) 86%, #f5f8ef 14%);
   color: color-mix(in srgb, var(--seren-article-text) 84%, #677B50 16%);
+  box-shadow: 0 14px 38px -34px color-mix(in srgb, #677B50 48%, #000);
 }
 
 #article-container blockquote p:last-child {
@@ -154,12 +178,12 @@ body:not(:has(#page-header.full_page)) #web_bg {
 
 #article-container ul,
 #article-container ol {
-  margin: 0.7rem 0 1.2rem 1.2rem;
-  padding-left: 1.05rem;
+  margin: 0.75rem 0 1.32rem 1.18rem;
+  padding-left: 1.12rem;
 }
 
 #article-container li {
-  margin: 0.36rem 0;
+  margin: 0.42rem 0;
   padding-left: 0.15rem;
 }
 
@@ -169,10 +193,38 @@ body:not(:has(#page-header.full_page)) #web_bg {
 }
 
 #article-container hr {
-  height: 1px;
-  margin: 2.1rem auto;
+  position: relative;
+  height: 1.8rem;
+  margin: 2.35rem auto 2.5rem;
   border: 0;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, #677B50 54%, transparent), transparent);
+  overflow: visible;
+  background: none;
+}
+
+#article-container hr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, #677B50 24%, transparent), color-mix(in srgb, #677B50 46%, transparent), color-mix(in srgb, #677B50 24%, transparent), transparent);
+}
+
+#article-container hr::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.72rem;
+  height: 0.72rem;
+  border: 1px solid color-mix(in srgb, #677B50 48%, transparent);
+  border-radius: 999px 999px 999px 0;
+  background: color-mix(in srgb, var(--card-bg, #fff) 82%, #f4f8ed 18%);
+  box-shadow:
+    0 0 0 0.38rem color-mix(in srgb, var(--card-bg, #fff) 92%, transparent),
+    0 0 0 0.5rem color-mix(in srgb, #677B50 7%, transparent);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 #article-container img {
@@ -201,7 +253,8 @@ body:not(:has(#page-header.full_page)) #web_bg {
   border-radius: 0.45em;
   background: color-mix(in srgb, #677B50 10%, transparent);
   color: color-mix(in srgb, #677B50 78%, var(--font-color, #1f2933));
-  font-size: 0.92em;
+  font-family: "SFMono-Regular", "Cascadia Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 0.88em;
 }
 
 #article-container figure.highlight,
@@ -249,6 +302,7 @@ html[data-theme='dark'] #page {
   --seren-article-muted: color-mix(in srgb, var(--font-color, #f3f4f6) 62%, transparent);
   --seren-article-soft: color-mix(in srgb, #677B50 16%, transparent);
   --seren-article-border: color-mix(in srgb, #677B50 26%, transparent);
+  --seren-article-paper: color-mix(in srgb, var(--card-bg, #121212) 88%, #1d2518 12%);
 }
 
 html[data-theme='dark'] #article-container blockquote {
@@ -270,8 +324,8 @@ html[data-theme='dark'] #article-container blockquote {
   }
 
   #article-container {
-    font-size: 16.5px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 1.95;
   }
 
   #article-container h1 {
