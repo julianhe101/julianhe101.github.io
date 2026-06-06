@@ -54,7 +54,7 @@ body:not(:has(#page-header.full_page)) #web_bg {
   color: var(--seren-article-text);
   font-family: var(--seren-reading-font);
   font-size: 19px;
-  line-height: 2.08;
+  line-height: 1.82;
   letter-spacing: 0;
   word-break: break-word;
   text-rendering: optimizeLegibility;
@@ -62,7 +62,7 @@ body:not(:has(#page-header.full_page)) #web_bg {
 }
 
 #article-container p {
-  margin: 0 0 1.28em;
+  margin: 0 0 1.08em;
 }
 
 #article-container > p:first-of-type {
@@ -93,19 +93,9 @@ body:not(:has(#page-header.full_page)) #web_bg {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  padding-bottom: 0.68rem;
+  padding-bottom: 0;
   border-bottom: 0;
   font-size: clamp(1.52rem, 2.05vw, 1.95rem);
-}
-
-#article-container h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: min(100%, 22rem);
-  height: 1px;
-  background: linear-gradient(90deg, color-mix(in srgb, #677B50 42%, transparent), color-mix(in srgb, #677B50 10%, transparent), transparent);
 }
 
 #article-container h2::before {
@@ -246,34 +236,6 @@ body:not(:has(#page-header.full_page)) #web_bg {
   color: color-mix(in srgb, var(--font-color, #1f2933) 84%, #677B50 16%);
 }
 
-#article-container code:not(pre code) {
-  margin: 0 0.08em;
-  padding: 0.16em 0.42em;
-  border: 1px solid color-mix(in srgb, #677B50 18%, transparent);
-  border-radius: 0.45em;
-  background: color-mix(in srgb, #677B50 10%, transparent);
-  color: color-mix(in srgb, #677B50 78%, var(--font-color, #1f2933));
-  font-family: "SFMono-Regular", "Cascadia Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 0.88em;
-}
-
-#article-container figure.highlight,
-#article-container pre {
-  border: 1px solid color-mix(in srgb, #677B50 16%, transparent);
-  border-radius: 16px;
-  box-shadow: 0 18px 52px -42px color-mix(in srgb, #677B50 42%, #000);
-}
-
-#article-container .highlight-tools {
-  border-bottom: 1px solid color-mix(in srgb, #677B50 13%, transparent);
-}
-
-#post-info .post-title {
-  font-size: clamp(2rem, 5vw, 3.45rem);
-  letter-spacing: 0;
-  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.24);
-}
-
 #post-info #post-meta {
   font-size: 0.98rem;
   opacity: 0.92;
@@ -325,7 +287,7 @@ html[data-theme='dark'] #article-container blockquote {
 
   #article-container {
     font-size: 17px;
-    line-height: 1.95;
+    line-height: 1.78;
   }
 
   #article-container h1 {
