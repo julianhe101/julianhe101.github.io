@@ -1,6 +1,6 @@
 // Serenius Butterfly non-invasive enhancements.
 (function () {
-  const subtitleText = "幸好，我依旧为生活的小事雀跃";
+  const subtitleText = "幸好，我依旧为生活的小事雀跃\n没有不表现为痛苦的成长";
   const subtitleTyping = true;
   const musicEnable = true;
   const runtimeEnable = true;
