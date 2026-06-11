@@ -65,6 +65,10 @@ body:not(:has(#page-header.full_page)) #web_bg {
   }
 }
 
+#card-toc .toc-number {
+  display: none;
+}
+
 #article-container hr {
   position: relative;
   height: 1.8rem;
