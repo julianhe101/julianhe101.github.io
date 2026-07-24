@@ -69,7 +69,10 @@
     "branch": "main",
     "cname": "",
     "token": "",
-    "deployHistory": []
+    "deployHistory": [
+      "2026-07-24 01:21"
+    ],
+    "lastDeploy": "2026-07-24 01:21"
   },
   "footer": {
     "quote": "慢工出细活，欲速则一坨",
