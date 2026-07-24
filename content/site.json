@@ -1,0 +1,78 @@
+{
+  "name": "MyLibrary",
+  "tagline": "记录思考，构建知识",
+  "author": {
+    "name": "JulianHe",
+    "bio": "CTF Player · Security Researcher · Builder",
+    "avatar": ""
+  },
+  "about": {
+    "displayName": "JulianHe",
+    "bio": "CTF Player · Security Researcher · Builder",
+    "avatar": "https://a1.boltp.com/2026/07/22/6a602c9a45847.jpg",
+    "location": "北京",
+    "website": "https://julianhe.github.io",
+    "github": "https://github.com/julianhe101",
+    "email": "2551357985@qq.com",
+    "skills": [
+      {
+        "name": "CTF",
+        "level": 85
+      },
+      {
+        "name": "Web Security",
+        "level": 80
+      },
+      {
+        "name": "Cryptography",
+        "level": 70
+      },
+      {
+        "name": "Reverse Engineering",
+        "level": 60
+      },
+      {
+        "name": "AI / LLM",
+        "level": 75
+      },
+      {
+        "name": "Python",
+        "level": 90
+      },
+      {
+        "name": "React / TypeScript",
+        "level": 78
+      },
+      {
+        "name": "Docker",
+        "level": 72
+      }
+    ]
+  },
+  "friends": [
+    {
+      "name": "听风寻雷",
+      "url": "https://twi1igh7.github.io/",
+      "description": "来自Besti Club的二年级学生",
+      "avatar": "https://a1.boltp.com/2026/07/23/6a61b6d70ef80.jpg"
+    }
+  ],
+  "theme": {
+    "accent": "#6B8E5A",
+    "fontScale": "100",
+    "layout": "centered",
+    "codeTheme": "auto"
+  },
+  "publish": {
+    "provider": "github-pages",
+    "repo": "julianhe101/julianhe101.github.io",
+    "branch": "main",
+    "cname": "",
+    "token": "",
+    "deployHistory": []
+  },
+  "footer": {
+    "quote": "慢工出细活，欲速则一坨",
+    "showPoweredBy": true
+  }
+}
