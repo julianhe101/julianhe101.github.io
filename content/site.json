@@ -47,7 +47,8 @@
         "name": "Docker",
         "level": 72
       }
-    ]
+    ],
+    "longBio": "困困之"
   },
   "friends": [
     {
@@ -70,13 +71,24 @@
     "cname": "",
     "token": "",
     "deployHistory": [
+      "2026-07-24 02:30",
       "2026-07-24 02:28",
       "2026-07-24 01:21"
     ],
-    "lastDeploy": "2026-07-24 02:28"
+    "lastDeploy": "2026-07-24 02:30"
   },
   "footer": {
     "quote": "慢工出细活，欲速则一坨",
     "showPoweredBy": true
+  },
+  "music": {
+    "enabled": true,
+    "playlists": [
+      {
+        "platform": "qq",
+        "id": "9739493435",
+        "label": "我的歌单"
+      }
+    ]
   }
 }
